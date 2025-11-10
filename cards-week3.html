@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 Cards - بطاقات الأسبوع الثالث</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* الألوان والمتغيرات الأساسية */
+:root {
+--primary-blue: #61C5FF;
+--accent-green: #A3FF48;
+--highlight-orange: #FF8C00;
+--background-light: #F0F8FF;
+--background-white: #FFFFFF;
+--text-dark: #333333;
+--shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+--font-main: 'Lora', serif;
+}
+body {
+background-color: var(--background-light);
+color: var(--text-dark);
+font-family: var(--font-main);
+margin: 0;
+padding: 0;
+text-align: right;
+}
+.header {
+background-color: var(--primary-blue);
+padding: 15px 40px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+.logo-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+color: var(--background-white);
+margin-bottom: 5px;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo .e {
+color: #000000;
+font-size: 1.3em;
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo .q {
+color: var(--highlight-orange);
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo-subtitle {
+font-size: 14px;
+color: var(--background-white);
+opacity: 0.8;
+}
+
+.stars-top, .stars-bottom {
+color: #FFD700;
+font-size: 14px;
+letter-spacing: 5px;
+margin: 5px 0;
+}
+
+.stars-top {
+animation: twinkle 3s infinite;
+}
+
+.stars-bottom {
+animation: twinkle 3s infinite 1.5s;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); text-shadow: 0 0 15px rgba(255, 215, 0, 0.9); }
+100% { transform: scale(1); }
+}
+
+@keyframes glow {
+0% { text-shadow: 0 0 5px var(--accent-green); }
+50% { text-shadow: 0 0 20px var(--accent-green), 0 0 30px var(--accent-green); }
+100% { text-shadow: 0 0 5px var(--accent-green); }
+}
+
+@keyframes twinkle {
+0%, 100% { opacity: 0.3; }
+50% { opacity: 1; }
+}
+.hero {
+padding: 60px 20px;
+text-align: center;
+background: linear-gradient(180deg, var(--background-white), var(--background-light));
+}
+.hero-title {
+color: var(--primary-blue);
+font-size: 44px;
+margin-bottom: 10px;
+}
+.back-link {
+display: inline-block;
+margin-top: 20px;
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 20px;
+transition: background-color 0.3s;
+}
+.back-link:hover {
+background-color: #4AA4E0;
+}
+.vocabulary-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+.vocabulary-card {
+background-color: var(--background-white);
+border-radius: 15px;
+overflow: hidden;
+box-shadow: var(--shadow-light);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.vocabulary-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.vocabulary-image {
+width: 100%;
+height: auto;
+object-fit: contain;
+display: block;
+}
+.vocabulary-content {
+padding: 15px;
+}
+.vocabulary-word {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary-blue);
+margin-bottom: 5px;
+}
+.vocabulary-meaning {
+font-size: 18px;
+color: var(--text-dark);
+margin-bottom: 15px;
+}
+/* نمط الصورة المكبرة */
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.9);
+cursor: pointer;
+}
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+max-height: 80%;
+object-fit: contain;
+animation: zoom 0.6s;
+}
+@keyframes zoom {
+from {transform: scale(0)}
+to {transform: scale(1)}
+}
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+.footer {
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo-container">
+<div class="logo">
+<div class="stars-top">✦ ✦ ✦</div>
+<span class="e">Grade</span> <span class="q">6 Cards</span>
+<div class="stars-bottom">✦ ✦ ✦</div>
+</div>
+<div class="logo-subtitle">بطاقات تعلم الإنجليزية</div>
+</div>
+</div>
+
+<div class="hero">
+<h1 class="hero-title">بطاقات الأسبوع الثالث</h1>
+<p>تعلم الكلمات الجديدة مع الصور</p>
+<a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+</div>
+
+<div class="vocabulary-container">
+<div class="vocabulary-card">
+<img src="./week 3/card31.jpg" alt="البطاقة الأولى" class="vocabulary-image" onclick="openModal('./week 3/card31.jpg')">
+<div class="vocabulary-content">
+<div class="vocabulary-word">البطاقة الأولى</div>
+<div class="vocabulary-meaning">بطاقة الأسبوع الثالث الأولى</div>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week 3/card32.jpg" alt="البطاقة الثانية" class="vocabulary-image" onclick="openModal('./week 3/card32.jpg')">
+<div class="vocabulary-content">
+<div class="vocabulary-word">البطاقة الثانية</div>
+<div class="vocabulary-meaning">بطاقة الأسبوع الثالث الثانية</div>
+</div>
+</div>
+</div>
+
+
+
+<script>
+// وظيفة فتح نافذة الصورة المكبرة
+function openModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = src;
+}
+
+// وظيفة إغلاق نافذة الصورة المكبرة
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+<!-- نافذة الصورة المكبرة -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+</body>
+</html>

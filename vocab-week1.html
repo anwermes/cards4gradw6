@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 Cards - مفردات الأسبوع الأول</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* الألوان والمتغيرات الأساسية */
+:root {
+--primary-blue: #61C5FF;
+--accent-green: #A3FF48;
+--highlight-orange: #FF8C00;
+--background-light: #F0F8FF;
+--background-white: #FFFFFF;
+--text-dark: #333333;
+--shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+--font-main: 'Lora', serif;
+}
+body {
+background-color: var(--background-light);
+color: var(--text-dark);
+font-family: var(--font-main);
+margin: 0;
+padding: 0;
+text-align: right;
+}
+.header {
+background-color: var(--primary-blue);
+padding: 15px 40px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+.logo-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+color: var(--background-white);
+margin-bottom: 5px;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo .e {
+color: #000000;
+font-size: 1.3em;
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo .q {
+color: var(--highlight-orange);
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo-subtitle {
+font-size: 14px;
+color: var(--background-white);
+opacity: 0.8;
+}
+
+.stars-top, .stars-bottom {
+color: #FFD700;
+font-size: 14px;
+letter-spacing: 5px;
+margin: 5px 0;
+}
+
+.stars-top {
+animation: twinkle 3s infinite;
+}
+
+.stars-bottom {
+animation: twinkle 3s infinite 1.5s;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); text-shadow: 0 0 15px rgba(255, 215, 0, 0.9); }
+100% { transform: scale(1); }
+}
+
+@keyframes glow {
+0% { text-shadow: 0 0 5px var(--accent-green); }
+50% { text-shadow: 0 0 20px var(--accent-green), 0 0 30px var(--accent-green); }
+100% { text-shadow: 0 0 5px var(--accent-green); }
+}
+
+@keyframes twinkle {
+0%, 100% { opacity: 0.3; }
+50% { opacity: 1; }
+}
+.hero {
+padding: 60px 20px;
+text-align: center;
+background: linear-gradient(180deg, var(--background-white), var(--background-light));
+}
+.hero-title {
+color: var(--primary-blue);
+font-size: 44px;
+margin-bottom: 10px;
+}
+.back-link {
+display: inline-block;
+margin-top: 20px;
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 20px;
+transition: background-color 0.3s;
+}
+.back-link:hover {
+background-color: #4AA4E0;
+}
+.vocabulary-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+.vocabulary-card {
+background-color: var(--background-white);
+border-radius: 15px;
+overflow: hidden;
+box-shadow: var(--shadow-light);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.vocabulary-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.vocabulary-image {
+width: 100%;
+height: 200px;
+object-fit: cover;
+display: block;
+}
+.vocabulary-content {
+padding: 15px;
+}
+.vocabulary-word {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary-blue);
+margin-bottom: 5px;
+}
+.vocabulary-meaning {
+font-size: 18px;
+color: var(--text-dark);
+margin-bottom: 15px;
+}
+.pronunciation-button {
+background-color: var(--accent-green);
+color: white;
+border: none;
+border-radius: 20px;
+padding: 8px 15px;
+cursor: pointer;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 5px;
+transition: background-color 0.3s;
+}
+.pronunciation-button:hover {
+background-color: #8fe040;
+}
+.pronunciation-button::before {
+content: "🔊";
+font-size: 18px;
+}
+.footer {
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo-container">
+<div class="logo">
+<div class="stars-top">✦ ✦ ✦</div>
+<span class="e">Grade</span> <span class="q">6 Cards</span>
+<div class="stars-bottom">✦ ✦ ✦</div>
+</div>
+<div class="logo-subtitle">بطاقات تعلم الإنجليزية</div>
+</div>
+</div>
+
+<div class="hero">
+<h1 class="hero-title">مفردات الأسبوع الأول</h1>
+<p>تعلم الكلمات الجديدة مع الصور والنطق الصحيح</p>
+<a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+</div>
+
+<div class="vocabulary-container">
+<div class="vocabulary-card">
+<img src="./week1/accident.jpeg" alt="Accident" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Accident</div>
+<div class="vocabulary-meaning">حادث</div>
+<button class="pronunciation-button" onclick="playPronunciation('Accident')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/awful.webp" alt="Awful" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Awful</div>
+<div class="vocabulary-meaning">فظيع، سيء جداً</div>
+<button class="pronunciation-button" onclick="playPronunciation('Awful')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/bang.jpg" alt="Bang" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Bang</div>
+<div class="vocabulary-meaning">انفجار، صوت انفجار</div>
+<button class="pronunciation-button" onclick="playPronunciation('Bang')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/call.jpg" alt="Call" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Call</div>
+<div class="vocabulary-meaning">مكالمة، يتصل بـ</div>
+<button class="pronunciation-button" onclick="playPronunciation('Call')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/crash.webp" alt="Crash" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Crash</div>
+<div class="vocabulary-meaning">تصادم، حادث تحطم</div>
+<button class="pronunciation-button" onclick="playPronunciation('Crash')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/fall.gif" alt="Fall" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Fall</div>
+<div class="vocabulary-meaning">سقوط، يقع</div>
+<button class="pronunciation-button" onclick="playPronunciation('Fall')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/miss.avif" alt="Miss" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Miss</div>
+<div class="vocabulary-meaning">يفوت، يفتقد</div>
+<button class="pronunciation-button" onclick="playPronunciation('Miss')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/stairs.jpeg" alt="Stairs" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Stairs</div>
+<div class="vocabulary-meaning">درج، سلالم</div>
+<button class="pronunciation-button" onclick="playPronunciation('Stairs')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/still.jpg" alt="Still" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Still</div>
+<div class="vocabulary-meaning">لا يزال، ساكن</div>
+<button class="pronunciation-button" onclick="playPronunciation('Still')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/summer camp.jpeg" alt="Summer camp" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Summer camp</div>
+<div class="vocabulary-meaning">معسكر صيفي</div>
+<button class="pronunciation-button" onclick="playPronunciation('Summer camp')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/tired.jpeg" alt="Tired" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Tired</div>
+<div class="vocabulary-meaning">متعب</div>
+<button class="pronunciation-button" onclick="playPronunciation('Tired')">استمع للنطق</button>
+</div>
+</div>
+
+<div class="vocabulary-card">
+<img src="./week1/welcome back.webp" alt="Welcome back" class="vocabulary-image">
+<div class="vocabulary-content">
+<div class="vocabulary-word">Welcome back</div>
+<div class="vocabulary-meaning">مرحباً بعودتك</div>
+<button class="pronunciation-button" onclick="playPronunciation('Welcome back')">استمع للنطق</button>
+</div>
+</div>
+</div>
+
+
+
+<script>
+// وظيفة النطق (تستخدم SpeechSynthesis API)
+function playPronunciation(word) {
+const utterance = new SpeechSynthesisUtterance(word);
+utterance.lang = 'en-US'; 
+window.speechSynthesis.speak(utterance);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 Cards - بطاقات الأسبوع الأول</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* الألوان والمتغيرات الأساسية */
+:root {
+--primary-blue: #61C5FF;
+--accent-green: #A3FF48;
+--highlight-orange: #FF8C00;
+--background-light: #F0F8FF;
+--background-white: #FFFFFF;
+--text-dark: #333333;
+--shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+--font-main: 'Lora', serif;
+}
+body {
+background-color: var(--background-light);
+color: var(--text-dark);
+font-family: var(--font-main);
+margin: 0;
+padding: 0;
+text-align: right;
+}
+.header {
+background-color: var(--primary-blue);
+padding: 15px 40px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+.logo-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+color: var(--background-white);
+margin-bottom: 5px;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo .e {
+color: #000000;
+font-size: 1.3em;
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo .q {
+color: var(--highlight-orange);
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo-subtitle {
+font-size: 14px;
+color: var(--background-white);
+opacity: 0.8;
+}
+
+.stars-top, .stars-bottom {
+color: #FFD700;
+font-size: 14px;
+letter-spacing: 5px;
+margin: 5px 0;
+}
+
+.stars-top {
+animation: twinkle 3s infinite;
+}
+
+.stars-bottom {
+animation: twinkle 3s infinite 1.5s;
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); text-shadow: 0 0 15px rgba(255, 215, 0, 0.9); }
+100% { transform: scale(1); }
+}
+
+@keyframes glow {
+0% { text-shadow: 0 0 5px var(--accent-green); }
+50% { text-shadow: 0 0 20px var(--accent-green), 0 0 30px var(--accent-green); }
+100% { text-shadow: 0 0 5px var(--accent-green); }
+}
+
+@keyframes twinkle {
+0%, 100% { opacity: 0.3; }
+50% { opacity: 1; }
+}
+.hero {
+padding: 60px 20px;
+text-align: center;
+background: linear-gradient(180deg, var(--background-white), var(--background-light));
+}
+.hero-title {
+color: var(--primary-blue);
+font-size: 44px;
+margin-bottom: 10px;
+}
+.back-link {
+display: inline-block;
+margin-top: 20px;
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 20px;
+transition: background-color 0.3s;
+}
+.back-link:hover {
+background-color: #4AA4E0;
+}
+.cards-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+padding: 20px;
+max-width: 800px;
+margin: 0 auto;
+}
+.card-wrapper {
+text-align: center;
+}
+.card-image {
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+box-shadow: var(--shadow-light);
+transition: transform 0.3s;
+}
+.card-image:hover {
+transform: scale(1.02);
+}
+.card-title {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary-blue);
+margin-top: 15px;
+}
+.footer {
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo-container">
+<div class="logo">
+<div class="stars-top">✦ ✦ ✦</div>
+<span class="e">Grade</span> <span class="q">6 Cards</span>
+<div class="stars-bottom">✦ ✦ ✦</div>
+</div>
+<div class="logo-subtitle">بطاقات تعلم الإنجليزية</div>
+</div>
+</div>
+
+<div class="hero">
+<h1 class="hero-title">حل بطاقات الأسبوع الأول</h1>
+<p>حلول بطاقات الأنشطة للصف السادس</p>
+<a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+</div>
+
+<div class="cards-container">
+<div class="card-wrapper">
+<img src="./week1/١.jpg" alt="البطاقة الأولى" class="card-image">
+<div class="card-title">البطاقة الأولى</div>
+</div>
+
+<div class="card-wrapper">
+<img src="./week1/٢.jpg" alt="البطاقة الثانية" class="card-image">
+<div class="card-title">البطاقة الثانية</div>
+</div>
+
+<div class="card-wrapper">
+<img src="./week1/٣.jpg" alt="البطاقة الثالثة" class="card-image">
+<div class="card-title">البطاقة الثالثة</div>
+</div>
+</div>
+
+<div class="footer">
+<p>© 2025 Grade 6 Cards - جميع الحقوق محفوظة</p>
+</div>
+</body>
+</html>

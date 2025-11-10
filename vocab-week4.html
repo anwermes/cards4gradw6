@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 6 Cards - مفردات الأسبوع الرابع</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* الألوان والمتغيرات الأساسية */
+:root {
+--primary-blue: #61C5FF;
+--accent-green: #A3FF48;
+--highlight-orange: #FF8C00;
+--background-light: #F0F8FF;
+--background-white: #FFFFFF;
+--text-dark: #333333;
+--shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+--font-main: 'Lora', serif;
+}
+body {
+background-color: var(--background-light);
+color: var(--text-dark);
+font-family: var(--font-main);
+margin: 0;
+padding: 0;
+text-align: right;
+}
+.header {
+background-color: var(--primary-blue);
+padding: 15px 40px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+.logo-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+}
+.logo {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+color: var(--background-white);
+margin-bottom: 5px;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo .e {
+color: #000000;
+font-size: 1.3em;
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo .q {
+color: var(--highlight-orange);
+font-weight: 700;
+font-family: var(--font-main);
+display: inline-block;
+margin-right: 3px;
+}
+
+.logo-subtitle {
+font-size: 14px;
+color: var(--background-white);
+opacity: 0.8;
+}
+
+.stars-top, .stars-bottom {
+color: #FFD700;
+font-size: 14px;
+letter-spacing: 5px;
+margin: 5px 0;
+}
+
+.stars-top {
+animation: twinkle 3s infinite;
+}
+
+.stars-bottom {
+animation: twinkle 3s infinite 1.5s;
+}
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); text-shadow: 0 0 15px rgba(255, 215, 0, 0.9); }
+100% { transform: scale(1); }
+}
+
+@keyframes glow {
+0% { text-shadow: 0 0 5px var(--accent-green); }
+50% { text-shadow: 0 0 20px var(--accent-green), 0 0 30px var(--accent-green); }
+100% { text-shadow: 0 0 5px var(--accent-green); }
+}
+
+@keyframes twinkle {
+0%, 100% { opacity: 0.3; }
+50% { opacity: 1; }
+}
+@keyframes bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+.hero {
+padding: 60px 20px;
+text-align: center;
+background: linear-gradient(180deg, var(--background-white), var(--background-light));
+}
+.hero-title {
+color: var(--primary-blue);
+font-size: 44px;
+margin-bottom: 10px;
+position: relative;
+display: inline-block;
+}
+.animated-underline {
+height: 4px;
+background: linear-gradient(90deg, var(--primary-blue), var(--accent-green));
+width: 100%;
+border-radius: 2px;
+animation: expandWidth 2s infinite;
+}
+@keyframes expandWidth {
+0% { width: 0; }
+50% { width: 100%; }
+100% { width: 0; }
+}
+.back-link {
+display: inline-block;
+margin-top: 20px;
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 20px;
+transition: background-color 0.3s;
+}
+.back-link:hover {
+background-color: #4AA4E0;
+}
+.content-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+.section-title {
+color: var(--primary-blue);
+font-size: 28px;
+margin: 30px 0 15px;
+border-bottom: 2px solid var(--accent-green);
+padding-bottom: 10px;
+}
+.vocabulary-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+margin-bottom: 40px;
+}
+.vocabulary-item {
+background-color: var(--background-white);
+border-radius: 15px;
+padding: 20px;
+box-shadow: var(--shadow-light);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.vocabulary-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.vocabulary-word {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary-blue);
+margin-bottom: 5px;
+}
+.vocabulary-meaning {
+font-size: 18px;
+color: var(--text-dark);
+margin-bottom: 15px;
+}
+.vocabulary-image {
+width: 100%;
+height: auto;
+object-fit: contain;
+display: block;
+margin-top: 15px;
+border-radius: 10px;
+}
+.pronunciation-button {
+background: none;
+border: none;
+cursor: pointer;
+outline: none;
+padding: 5px;
+margin-top: 10px;
+transition: transform 0.2s;
+}
+.pronunciation-button:hover {
+transform: scale(1.1);
+}
+.pronunciation-button::before {
+content: "🔊";
+font-size: 18px;
+}
+.footer {
+background-color: var(--primary-blue);
+color: var(--background-white);
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo-container">
+<div class="logo">
+<div class="stars-top">✦ ✦ ✦</div>
+<span class="e">Grade</span> <span class="q">6 Cards</span>
+<div class="stars-bottom">✦ ✦ ✦</div>
+</div>
+<div class="logo-subtitle">بطاقات تعلم الإنجليزية</div>
+</div>
+</div>
+
+<div class="hero">
+<h1 class="hero-title">مفردات الأسبوع الرابع</h1>
+<div class="animated-underline"></div>
+<p>تعلم المفردات الجديدة</p>
+<a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+</div>
+
+<div class="content-container">
+<h2 class="section-title">مفردات الأسبوع</h2>
+<div class="vocabulary-grid">
+<div class="vocabulary-item">
+<div class="vocabulary-word">Adventure</div>
+<div class="vocabulary-meaning">مغامرة</div>
+<button class="pronunciation-button" onclick="playPronunciation('Adventure')">استمع للنطق</button>
+<img src="./week-4/adventure.jpeg" alt="Adventure" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Burst</div>
+<div class="vocabulary-meaning">ينفجر / ينفجر ضاحكاً</div>
+<button class="pronunciation-button" onclick="playPronunciation('Burst')">استمع للنطق</button>
+<img src="./week-4/burst.jpeg" alt="Burst" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Chase</div>
+<div class="vocabulary-meaning">يطارد / يلاحق</div>
+<button class="pronunciation-button" onclick="playPronunciation('Chase')">استمع للنطق</button>
+<img src="./week-4/chase.jpeg" alt="Chase" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Turn over</div>
+<div class="vocabulary-meaning">يقلب / ينقلب</div>
+<button class="pronunciation-button" onclick="playPronunciation('Turn over')">استمع للنطق</button>
+<img src="./week-4/turn over.jpeg" alt="Turn over" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Thirteenth</div>
+<div class="vocabulary-meaning">الثالث عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Thirteenth')"></button>
+<img src="./week-4/thirteenth.jpeg" alt="Thirteenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Fourteenth</div>
+<div class="vocabulary-meaning">الرابع عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Fourteenth')"></button>
+<img src="./week-4/fourteenth.jpeg" alt="Fourteenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Fifteenth</div>
+<div class="vocabulary-meaning">الخامس عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Fifteenth')"></button>
+<img src="./week-4/fifteenth.jpeg" alt="Fifteenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Sixteenth</div>
+<div class="vocabulary-meaning">السادس عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Sixteenth')"></button>
+<img src="./week-4/sixteenth.jpeg" alt="Sixteenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Seventeenth</div>
+<div class="vocabulary-meaning">السابع عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Seventeenth')"></button>
+<img src="./week-4/seventeenth.jpeg" alt="Seventeenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Eighteenth</div>
+<div class="vocabulary-meaning">الثامن عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Eighteenth')"></button>
+<img src="./week-4/eighteenth.jpeg" alt="Eighteenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Nineteenth</div>
+<div class="vocabulary-meaning">التاسع عشر</div>
+<button class="pronunciation-button" onclick="playPronunciation('Nineteenth')"></button>
+<img src="./week-4/nineteenth.jpeg" alt="Nineteenth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Twentieth</div>
+<div class="vocabulary-meaning">العشرون</div>
+<button class="pronunciation-button" onclick="playPronunciation('Twentieth')"></button>
+<img src="./week-4/twentieth.jpeg" alt="Twentieth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Twenty first</div>
+<div class="vocabulary-meaning">الحادي والعشرون</div>
+<button class="pronunciation-button" onclick="playPronunciation('Twenty first')"></button>
+<img src="./week-4/twenty first.png" alt="Twenty first" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">Thirtieth</div>
+<div class="vocabulary-meaning">الثلاثون</div>
+<button class="pronunciation-button" onclick="playPronunciation('Thirtieth')"></button>
+<img src="week-4/thirtieth.jpeg" alt="Thirtieth" class="vocabulary-image">
+</div>
+
+<div class="vocabulary-item">
+<div class="vocabulary-word">When</div>
+<div class="vocabulary-meaning">متى / عندما</div>
+<button class="pronunciation-button" onclick="playPronunciation('When')"></button>
+<img src="week-4/when.png" alt="When" class="vocabulary-image">
+</div>
+</div>
+</div>
+
+
+
+<script>
+// وظيفة تشغيل النطق
+function playPronunciation(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-US';
+    window.speechSynthesis.speak(utterance);
+}
+</script>
+</body>
+</html>
